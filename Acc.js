@@ -1,9 +1,13 @@
 const accordion = document.querySelector(".main-container");
-const span = document.querySelector("span");
+const icons = document.querySelector(".icon");
 
-span.forEach((span) => {
-  console.log(span);
-  span.addEventListener("click", () => {
-    accordion.classList.toggle("active");
-  });
-});
+try {
+  for (let i = 0; i < icons.length; i++) {
+    icons[i].addEventListener("click", () => {
+      icons[i].classList.toggle("active");
+      console.log("icons");
+    });
+  }
+} catch (e) {
+  console.log("something went wrong", e);
+}
